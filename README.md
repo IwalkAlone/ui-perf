@@ -2,6 +2,11 @@
 
 **WARNING:** This repo is not done. I made it public to try to get help with [this](https://github.com/elm-lang/projects#compare-elms-virtual-dom-to-other-stuff). If you have the necessary skills, please share them. Would love to see how we stack up and if there are any tricks we can learn from!
 
+## Building
+
+To build, run
+  elm-make src/Picker.elm --output picker.js
+Serve using http-server or equivalent
 
 ## Methodology
 
