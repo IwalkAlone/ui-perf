@@ -6,7 +6,7 @@
 	<section class="main" *ngIf="todoStore.todos.length > 0">
 		<input class="toggle-all" type="checkbox" *ngIf="todoStore.todos.length" #toggleall [checked]="todoStore.allCompleted()" (click)="todoStore.setAllTo(toggleall.checked)">
 		<ul class="todo-list">
-			<todo-item *ngFor="#item of todoStore.todos" [item]="item" (done)="removeItem($event)" (itemUpdated)="itemUpdated($event)"></todo-item>
+			<todo-item *ngFor="#item of todoStore.todos; trackBy:identify" [item]="item" (done)="removeItem($event)" (itemUpdated)="itemUpdated($event)"></todo-item>
 		</ul>
 	</section>
 	<footer class="footer" *ngIf="todoStore.todos.length > 0">

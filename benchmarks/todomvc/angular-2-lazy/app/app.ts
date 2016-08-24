@@ -16,6 +16,10 @@ export default class TodoApp {
 		this.todoStore = todoStore;
 	}
 
+	identify(index: number, item: Todo) {
+		return index;
+	}
+
 	removeCompleted() {
 		this.todoStore.removeCompleted();
 	}
